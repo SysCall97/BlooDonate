@@ -6,7 +6,6 @@ const donorController = {};
 
 // register is the function to register as a donor
 donorController.register = async (req, res) => {
-    const toString = Object.prototype.toString;
     try {
         const area = (!!req.body.area) && (req.body.area.constructor === Array) ? [...req.body.area] : [req.body.area];
         const info = {
