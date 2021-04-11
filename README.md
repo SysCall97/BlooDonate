@@ -31,7 +31,7 @@ BlooDonate repository contains the BE code. Basically here I created some API by
 There is not much use of authentication in this app. Only one route is protected/authorized. I have developed a custom authentication system with JWT token. Here you'll be given a JWT token and all your requests will be take place based on that token. As soon as you logged out from the application, the token will be blacklisted and no one can use that ever again.
 
 ## API list
- 1. /user/signin (POST)
+ 1. /user/signin (POST) <br />
     This route is to signin as an user. 
     ```bash
     reqBody = {
@@ -40,7 +40,7 @@ There is not much use of authentication in this app. Only one route is protected
         "password": <password>
     }
     ```
- 2. /user/login (GET)
+ 2. /user/login (GET) <br />
     This route is to login as an user. 
     ```bash
     reqBody = {
@@ -48,9 +48,9 @@ There is not much use of authentication in this app. Only one route is protected
         "password": <password>
     }
     ```
- 3. /user/logout (POST)
+ 3. /user/logout (POST) <br />
     This route is to logout as an user.
- 4. /donor/register (POST)
+ 4. /donor/register (POST) <br />
     This route is to register as a blood donor. This is the only protected route where user needs to be logged in to call this API.
     ```bash
     reqBody = {
@@ -59,21 +59,21 @@ There is not much use of authentication in this app. Only one route is protected
         "area": [<list of areas where (s)he is able to donate blood>]
     }
     ```
- 5. /donor/donorArea (GET)
+ 5. /donor/donorArea (GET) <br />
     This route will bring all the donor of a particular area 
     ```bash
     reqBody = {
         "area": <name of the area where blood is required>
     }
     ```
- 6. /donor/donorBloodGroup (GET)
+ 6. /donor/donorBloodGroup (GET) <br />
     This route will list all the donor of a particular blood group of all regions
     ```bash
     reqBody = {
         "bloodGroup": <required blood group>
     }
     ```
- 7. /donor/donorBloodGroupArea (GET)
+ 7. /donor/donorBloodGroupArea (GET) <br />
     This route will list all the donor of a particular blood group of a particular area
     ```bash
     reqBody = {
