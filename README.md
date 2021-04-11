@@ -28,7 +28,7 @@ BlooDonate repository contains the BE code. Basically here I created some API by
  - JWT
 
 ## Authentication
-
+There is not much use of authentication in this app. Only one route is protected/authorized. I have developed a custom authentication system with JWT token. Here you'll be given a JWT token and all your requests will be take place based on that token. As soon as you logged out from the application, the token will be blacklisted and no one can use that ever again.
 
 ## API list
  1. /user/signin (POST)
@@ -81,3 +81,4 @@ BlooDonate repository contains the BE code. Basically here I created some API by
         "bloodGroup": <required blood group>
     }
     ```
+**Resume:** [https://drive.google.com/file/d/16hc-Pd4QrOeXGg8khFc2sq3RYKZD833D/view]
