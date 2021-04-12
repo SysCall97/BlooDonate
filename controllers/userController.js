@@ -52,7 +52,7 @@ userController.logIn = async (req, res) => {
 
 userController.logOut = async (req, res) => {
     try {
-        const data = await userService.logOut({ token: req.headers.authorization });
+        const data = await userService.logOut({ token: req.headers.authorization.split(' ')[1] });
         return res.status(200).json({ message: "Successfully logged out" });
     } catch (err) {
         return res.status(500).json({ message: err.message });
