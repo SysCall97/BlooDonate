@@ -9,6 +9,7 @@ const donorRoute = require('./routes/donorRoute');
 
 
 // primary setup
+const port = 5000;
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -19,4 +20,4 @@ app.use('/user', userRoute);
 app.use('/donor', donorRoute);
 
 // port
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || port);
